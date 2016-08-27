@@ -53,14 +53,78 @@ var ionic_angular_1 = require('ionic-angular');
   Ionic pages and navigation.
 */
 var ChecklistPage = (function () {
-    function ChecklistPage(navCtrl) {
+    function ChecklistPage(navCtrl, navParams, alertCtrl) {
         this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
+        this.checklist = this.navParams.get('checklist');
     }
+    ChecklistPage.prototype.addItem = function () {
+        var _this = this;
+        var prompt = this.alertCtrl.create({
+            title: 'Add Item',
+            message: 'Enter the name of the task for this checklist below:',
+            inputs: [
+                {
+                    name: 'name'
+                }
+            ],
+            buttons: [
+                {
+                    text: 'Cancel'
+                },
+                {
+                    text: 'Save',
+                    handler: function (data) {
+                        _this.checklist.addItem(data.name);
+                    }
+                }
+            ]
+        });
+        prompt.present();
+    };
+    ChecklistPage.prototype.toggleItem = function (item) {
+        this.checklist.toggleItem(item);
+    };
+    ChecklistPage.prototype.removetem = function (item) {
+        this.checklist.removeItem(item);
+    };
+    ChecklistPage.prototype.renameItem = function (item) {
+        var _this = this;
+        var prompt = this.alertCtrl.create({
+            title: 'Rename Item',
+            message: 'Enter the new name of the task for this checklist below:',
+            inputs: [
+                {
+                    name: 'name'
+                }
+            ],
+            buttons: [
+                {
+                    text: 'Cancel'
+                },
+                {
+                    text: 'Save',
+                    handler: function (data) {
+                        _this.checklist.renameItem(item, data.name);
+                    }
+                }
+            ]
+        });
+        prompt.present();
+    };
+    ChecklistPage.prototype.uncheckItems = function () {
+        var _this = this;
+        this.checklist.items.forEach(function (item) {
+            if (item.isChecked)
+                _this.checklist.toggleItem(item);
+        });
+    };
     ChecklistPage = __decorate([
         core_1.Component({
             templateUrl: 'build/pages/checklist/checklist.html',
         }), 
-        __metadata('design:paramtypes', [ionic_angular_1.NavController])
+        __metadata('design:paramtypes', [ionic_angular_1.NavController, ionic_angular_1.NavParams, ionic_angular_1.AlertController])
     ], ChecklistPage);
     return ChecklistPage;
 }());
