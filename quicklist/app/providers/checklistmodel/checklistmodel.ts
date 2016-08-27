@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import {Observable} from 'rxjs/Observable';
 
 /*
   Generated class for the Checklistmodel provider.
@@ -15,6 +16,9 @@ export class Checklistmodel {
 
   constructor(public title: string, public items: any[]) {
     this.items = items;
+    this.checklist = Observable.create(observer=>{
+      this.checklistObserver = observer;
+    })
   }
 
   addItem(title): void {
@@ -22,7 +26,9 @@ export class Checklistmodel {
       title: title,
       checked: false
     });
-  }
+
+    this.checklistObserver.next(true);
+    }
 
 
   removeItem(item): void {
@@ -36,14 +42,22 @@ export class Checklistmodel {
     if (index > -1) {
       this.items[index].title = title;
     }
+
+    this.checklistObserver.next(true);
+
+    this.checklistObserver.next(true);
   }
 
   setTitle(title):void{
     this.title = title;
+
+    this.checklistObserver.next(true);
   }
 
   toggleItem (item) :void{
     item.checked = !item.checked;
+
+    this.checklistObserver.next(true);
   }
 
 }
