@@ -74,8 +74,9 @@ export class ChecklistPage {
 
   uncheckItems(): void {
     this.checklist.items.forEach(item => {
-      if (item.isChecked) this.checklist.toggleItem(item);
-
+      if (item.checked) {
+        this.checklist.toggleItem(item);
+      }
     });
 
   }

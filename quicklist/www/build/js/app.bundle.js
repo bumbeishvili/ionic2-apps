@@ -118,8 +118,9 @@ var ChecklistPage = (function () {
     ChecklistPage.prototype.uncheckItems = function () {
         var _this = this;
         this.checklist.items.forEach(function (item) {
-            if (item.isChecked)
+            if (item.checked) {
                 _this.checklist.toggleItem(item);
+            }
         });
     };
     ChecklistPage = __decorate([
