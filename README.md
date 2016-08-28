@@ -15,6 +15,7 @@ repo contains ionic2  mobile apps , based on angular2, using typescript and sass
 
 ## Quicklist
 [View repository](/quicklist)  
-screenshot:
+demo:  
+![](https://raw.githubusercontent.com/bumbeishvili/Assets/master/Projects/Mobile/Ionic/Quicklist/quicklist-demo.gif)
 
 
