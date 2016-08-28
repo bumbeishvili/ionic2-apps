@@ -11,10 +11,10 @@
     <ion-label primary>საძებნი </ion-label>
     <ion-input placeholder="სიტყვა" [(ngModel)]="inputText"></ion-input>
   </ion-item>
-  
-  <button full light (click)="rhymeSeach()">რითმით ძებნა</button>
-  <button full secondary (click)="regexSearch()">Regex-ით ძებნა</button>
-  <button full (click)="clear()">გასუფთავება</button>
+
+  <button class="rhyme" full light (click)="rhymeSeach()">რითმით ძებნა</button>
+  <button class="regex" full secondary (click)="regexSearch()">Regex-ით ძებნა</button>
+  <button class="clear" full (click)="clear()">გასუფთავება</button>
 
   <ion-list>
     <ion-item *ngFor="let word of result;let i = index">
