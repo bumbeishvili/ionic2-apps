@@ -16,7 +16,7 @@ export class Checklistmodel {
 
   constructor(public title: string, public items: any[]) {
     this.items = items;
-    this.checklist = Observable.create(observer=>{
+    this.checklist = Observable.create(observer => {
       this.checklistObserver = observer;
     })
   }
@@ -28,33 +28,36 @@ export class Checklistmodel {
     });
 
     this.checklistObserver.next(true);
-    }
+  }
 
 
   removeItem(item): void {
     let index = this.items.indexOf(item);
 
-    if (index > -1) this.items.splice(index, 1);
+    if (index > -1) {
+      this.items.splice(index, 1);
+      this.checklistObserver.next(true);
+    }
   }
 
   renameItem(item, title): void {
     let index = this.items.indexOf(item);
     if (index > -1) {
       this.items[index].title = title;
+        this.checklistObserver.next(true);
     }
 
-    this.checklistObserver.next(true);
+  
 
-    this.checklistObserver.next(true);
   }
 
-  setTitle(title):void{
+  setTitle(title): void {
     this.title = title;
 
     this.checklistObserver.next(true);
   }
 
-  toggleItem (item) :void{
+  toggleItem(item): void {
     item.checked = !item.checked;
 
     this.checklistObserver.next(true);
