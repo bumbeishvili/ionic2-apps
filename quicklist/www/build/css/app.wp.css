@@ -9184,3 +9184,53 @@ body {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   font-size: 1.4rem;
   background-color: #fff; }
+
+.home-sliding-item {
+  margin: 5px; }
+
+.home-item {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #282828;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.secondary-detail {
+  display: block;
+  color: #cecece;
+  font-weight: 400;
+  margin-top: 10px; }
+
+ion-slide {
+  background-color: #32db64; }
+
+ion-slide img {
+  height: 85vh !important;
+  width: auto !important; }
+
+.checklist-item {
+  font-size: 0.9 em;
+  font-weight: bold;
+  color: #282828;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  border: none !important; }
+
+ion-item-content {
+  border: none !important; }
+
+ion-checkbox {
+  border: none !important; }
+
+ion-checkbox .item-inner {
+  border-bottom: none !important; }
+
+ion-content {
+  background-color: #32db64; }
+
+.logo {
+  max-height: 39px; }
+
+button {
+  border: none !important; }

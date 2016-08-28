@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Img Title
     </ion-title>
     <ion-buttons end>
       <button (click)="addChecklist()">
@@ -13,12 +13,12 @@
 
 <ion-content>
   <ion-list no-lines>
-    <ion-item-sliding *ngFor="let checklist of checklists">
+    <ion-item-sliding class="home-sliding-item" *ngFor="let checklist of checklists">
 
-      <button ion-item (click)="viewChecklist(checklist)">
+      <button class="home-item" ion-item (click)="viewChecklist(checklist)">
           <ion-item-content>
                {{checklist.title}}
-              <span>{{checklist.items.length}} items</span>
+              <span class="secondary-detail">{{checklist.items.length}} items</span>
               </ion-item-content>
        </button>
 

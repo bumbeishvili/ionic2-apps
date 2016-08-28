@@ -21,10 +21,10 @@ name="add-circle"></ion-icon></button>
 
 <ion-content>
   <ion-list no-lines>
-    <ion-item-sliding *ngFor="let item of checklist.items">
+    <ion-item-sliding class="home-sliding-item" *ngFor="let item of checklist.items">
       <ion-item>
         <ion-label>{{item.title}}</ion-label>
-        <ion-checkbox [checked]="item.checked" (click)="toggleItem(item)" class="checklist-item">
+        <ion-checkbox  [checked]="item.checked" (click)="toggleItem(item)" class="checklist-item">
         </ion-checkbox>
       </ion-item>
       <ion-item-options>

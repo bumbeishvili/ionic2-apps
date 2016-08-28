@@ -5441,8 +5441,8 @@ ion-checkbox {
   background-color: #fff; }
 
 .checkbox-checked {
-  border-color: #387ef5;
-  background-color: #387ef5; }
+  border-color: #fff;
+  background-color: #32db64; }
 
 .checkbox-checked .checkbox-inner {
   position: absolute;
@@ -6218,7 +6218,7 @@ ion-reorder {
     text-decoration: none; }
 
 .item.activated {
-  background-color: #d9d9d9;
+  background-color: #3aff74;
   -webkit-transition-duration: 0ms;
   transition-duration: 0ms; }
 
@@ -8724,3 +8724,53 @@ body {
   font-family: -apple-system, "Helvetica Neue", "Roboto", sans-serif;
   font-size: 1.4rem;
   background-color: #fff; }
+
+.home-sliding-item {
+  margin: 5px; }
+
+.home-item {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #282828;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.secondary-detail {
+  display: block;
+  color: #cecece;
+  font-weight: 400;
+  margin-top: 10px; }
+
+ion-slide {
+  background-color: #32db64; }
+
+ion-slide img {
+  height: 85vh !important;
+  width: auto !important; }
+
+.checklist-item {
+  font-size: 0.9 em;
+  font-weight: bold;
+  color: #282828;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  border: none !important; }
+
+ion-item-content {
+  border: none !important; }
+
+ion-checkbox {
+  border: none !important; }
+
+ion-checkbox .item-inner {
+  border-bottom: none !important; }
+
+ion-content {
+  background-color: #32db64; }
+
+.logo {
+  max-height: 39px; }
+
+button {
+  border: none !important; }
