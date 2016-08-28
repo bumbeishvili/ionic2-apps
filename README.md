@@ -3,6 +3,7 @@ repo contains ionic2  mobile apps , based on angular2, using typescript and sass
 
 ### List of apps  
 1. [Quick List](#quicklist)
+2. [Ritma](#ritma)
 
 --
 
@@ -19,3 +20,8 @@ demo:
 ![](https://raw.githubusercontent.com/bumbeishvili/Assets/master/Projects/Mobile/Ionic/Quicklist/quicklist-demo.gif)
 
 
+--
+
+## Ritma
+[View repository](/ritma)   
+demo (functionalities not yet implemented)
