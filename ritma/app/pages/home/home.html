@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      რითმა
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label primary>საძებნი </ion-label>
+    <ion-input placeholder="სიტყვა"></ion-input>
+  </ion-item>
+
+  <button full light (click)="rhymeSeach()">რითმით ძებნა</button>
+  <button full secondary (click)="regexSearch()">Regex-ით ძებნა</button>
+  <button full (click)="clear()">გასუფთავება</button>
+
+  <ion-list>
+    <ion-item *ngFor="let word of result;let i = index" >
+      {{i+1}}-  {{word}}
+    </ion-item>
+  </ion-list>
+
 </ion-content>
