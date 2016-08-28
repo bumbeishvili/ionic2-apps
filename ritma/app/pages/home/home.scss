@@ -1,9 +1,13 @@
 .home-page {
   .text-input{
-      padding:18px;
+      height:50px;
   }
 
   button{
       margin-top:10px;
   }
+
+  input[placeholder] {
+    text-overflow:ellipsis;
+}
 }
