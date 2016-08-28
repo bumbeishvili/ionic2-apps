@@ -18,6 +18,16 @@ export class HomePage {
     this.converter = new EncodingConverter();
   }
 
+  public clear(){
+    this.result = [];
+    this.inputText = '';
+  }
+
+  public rhymeSeach(){
+    this.result =[];
+    this.result.push('will be implemented shortly')
+  }
+
   public regexSearch(): void {
 
     if (!this.inputText) return;
@@ -35,6 +45,7 @@ export class HomePage {
       if (counter == 1000) break;
       if (this.words[i].match(regexPattern)) {
         this.result.push(this.converter.toGeorgian(this.words[i]));
+        counter++;
       }
     }
 
