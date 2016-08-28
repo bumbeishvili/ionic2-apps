@@ -165,7 +165,7 @@ var HomePage = (function () {
         });
         this.dataService.getData().then(function (checklists) {
             var savedChecklists = false;
-            if (typeof (checklists) != undefined) {
+            if (checklists) {
                 savedChecklists = JSON.parse(checklists);
             }
             if (savedChecklists) {

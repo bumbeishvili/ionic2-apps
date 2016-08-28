@@ -27,7 +27,8 @@ export class HomePage {
     this.dataService.getData().then(checklists => {
 
       let savedChecklists: any = false;
-      if (typeof (checklists) != undefined) {
+      
+      if (checklists) {
         savedChecklists = JSON.parse(checklists)
       }
 
