@@ -13,6 +13,34 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-slides [options]="slideOptions">
 
+    <ion-slide>
+      slide 1
+    </ion-slide>
+
+    <ion-slide>
+      slide 2
+    </ion-slide>
+
+    <ion-slide>
+      slide 3
+    </ion-slide>
+
+    <ion-slide>
+      <ion-row>
+        <ion-col>
+          <button (click)="goToHome()" style="margin-top:20px">
+              Start Using Quicklist
+              </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          slide 4
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
