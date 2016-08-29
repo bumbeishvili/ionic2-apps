@@ -46,8 +46,16 @@ export class HomePage {
     var regexPattern = new RegExp(stringPattern)
     
     this.dataService.getRegexSearchResult(regexPattern).then(result=> {
+
       this.loading = false;
-      this.result = result;
+      
+
+      this.result = [];
+
+      result.forEach(v=>{
+        this.result.push(this.converter.toGeorgian(v));
+      })
+      
     });
     
 
