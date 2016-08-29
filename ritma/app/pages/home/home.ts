@@ -9,11 +9,14 @@ import {Data} from '../../providers/data/data';
 export class HomePage {
   public result: string[] = []
   public inputText;
-  private words: string[];
+  private words: any;
   private converter: any;
+  private dataService:Data;
+  public loading:boolean = false;
 
 
   constructor(public navCtrl: NavController, data: Data) {
+    this.dataService = data;
     this.words = data.getWords();
     this.converter = new EncodingConverter();
   }
@@ -32,33 +35,22 @@ export class HomePage {
 
     if (!this.inputText) return;
 
+    
+
     this.result = [];
+    this.loading = true;
     var stringPattern = this.converter.toLatin(this.inputText);
 
     //todo escape \ sign
     var regexPattern = new RegExp(stringPattern)
-    console.log(regexPattern);
-
-    var counter = 0;
-
-    for (var i = 0; i < this.words.length; i++) {
-      if (counter == 1000) break;
-      if (this.words[i].match(regexPattern)) {
-        this.result.push(this.converter.toGeorgian(this.words[i]));
-        counter++;
-      }
-    }
-
+    
+    this.dataService.getRegexSearchResult(regexPattern).then(result=> {
+      this.loading = false;
+      this.result = result;
+    });
+    
 
   }
-
-
-
-
-
-
-
-
 }
 
 
