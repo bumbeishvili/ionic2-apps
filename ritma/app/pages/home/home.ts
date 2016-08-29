@@ -7,7 +7,7 @@ import {Data} from '../../providers/data/data';
   providers: [Data]
 })
 export class HomePage {
-  public result: string[] = []
+  public result:any;
   public inputText;
   private words: any;
   private converter: any;
@@ -17,6 +17,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, data: Data) {
     this.dataService = data;
+    this.result = [];
     this.words = data.getWords();
     this.converter = new EncodingConverter();
   }
