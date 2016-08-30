@@ -23,5 +23,6 @@ demo:
 --
 
 ## Ritma
-[View repository](/ritma)   
+[View repository](/ritma)  
+status : `in progress`
 demo (functionalities not yet implemented)
