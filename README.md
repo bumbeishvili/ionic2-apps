@@ -26,3 +26,6 @@ demo:
 [View repository](/ritma)  
 status : `in progress`
 demo (functionalities not yet implemented)
+
+last stable build 
+https://github.com/bumbeishvili/ionic2-apps/tree/b5f2760aa12dd4baf69f175471a12616c8b73572
