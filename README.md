@@ -23,9 +23,12 @@ demo:
 --
 
 ## Ritma
-[apk](apks/com.ionicframework.ritma314511_0.0.1.apk)
+[apk](apks/com.ionicframework.ritma314511_0.0.1.apk)  
+
 [View repository](/ritma)  
+
 status : `in progress`
+
 demo (functionalities not yet implemented)
 
 last stable build 
